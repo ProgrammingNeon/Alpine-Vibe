@@ -1,0 +1,173 @@
+.benefits {
+    padding: 120px 20px;
+    /* background: rgba(255, 255, 255, 0.02); */
+}
+
+.benefits-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.benefits-left {
+    flex: 1;
+    min-width: 350px;
+    color: white;
+}
+
+.pre-title {
+    color: #a8dadc;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.main-title {
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.main-title span {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.benefits-desc {
+    font-size: 20px;
+    opacity: 0.8;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.stats-row {
+    display: flex;
+    gap: 50px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color: #a8dadc;
+}
+
+.stat-text {
+    font-size: 16px;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+.benefits-right {
+    flex: 1;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    display: flex;
+    gap: 25px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+
+.benefit-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.03) translateX(10px);
+    border-color: #a8dadc;
+}
+
+.benefit-icon {
+    font-size: 30px;
+    color: #a8dadc;
+    flex-shrink: 0;
+}
+
+.benefit-info h3 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.benefit-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .benefits {
+        padding: 60px 15px; 
+    }
+
+    .benefits-container {
+        gap: 35px; 
+    }
+
+    .benefits-left, 
+    .benefits-right {
+        min-width: 100%; 
+        flex: 1 1 100%;
+    }
+
+    .main-title {
+        font-size: 28px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    .benefits-desc {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .stats-row {
+        gap: 30px;
+        justify-content: flex-start;
+    }
+
+    .stat-number {
+        font-size: 30px;
+    }
+
+    .stat-text {
+        font-size: 13px;
+    }
+
+    .benefit-card {
+        padding: 20px;
+        gap: 15px; 
+    }
+
+    .benefit-card:hover {
+        transform: scale(1.02); 
+    }
+
+    .benefit-info h3 {
+        font-size: 18px;
+    }
+
+    .benefit-info p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .benefit-card {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,128 @@
+.values-section {
+    padding: 50px 0;
+}
+
+.values-title {
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-card {
+    position: relative;
+    padding: 50px 40px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 35px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.value-number {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 8rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: 0;
+    transition: color 0.5s ease;
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    color: #ffd166;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
+.value-card p {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 769px) {
+    .value-card:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(168, 218, 220, 0.3);
+        transform: translateY(-5px);
+    }
+
+    .value-card:hover .value-number {
+        color: rgba(255, 209, 102, 0.07);
+    }
+}
+
+.active-value {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+@media (max-width: 768px) {
+    .values-section {
+        padding: 30px 0;
+    }
+
+    .values-title {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .value-card {
+        padding: 35px 25px; 
+        border-radius: 24px;
+    }
+
+    .value-number {
+        font-size: 5.5rem;
+        top: -5px;
+        right: 5px;
+    }
+
+    .value-icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .value-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .value-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
