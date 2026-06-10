@@ -28,6 +28,13 @@ ADMIN_ID = os.getenv("ADMIN_ID")
 app.include_router(main_router)
 
 
+
+origins = [
+    "https://programmingneon.github.io/Alpine-Vibe/", 
+    "http://localhost",
+    "http://127.0.0.1:8000",
+]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
