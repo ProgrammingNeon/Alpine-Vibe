@@ -14,9 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('https://singing-aflutter-encrust.ngrok-free.devsubmit-contact', {
+            const response = await fetch('https://singing-aflutter-encrust.ngrok-free.dev/submit-contact', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json' ,
+                    'ngrok-skip-browser-warning': 'true'
+                },
                 body: JSON.stringify(formData)
             });
 
